@@ -16,8 +16,10 @@ def step_impl(context):
     context.browser.find_element(By.ID, "email").send_keys("behavetest10@gmail.com")    
     time.sleep(2)
     context.browser.find_element(By.ID, "pass").send_keys("behave123!@#")
+    time.sleep(2)
     context.browser.find_element(By.ID, "u_0_2").click()
+    time.sleep(2)
     
 @step('I see my facebook home page')
 def step_impl(context):
-    assert_true(context.browser.find_element(By.XPATH, '//*[@id="u_s_2"]/input[2]'))
+    assert_true(context.browser.find_element(By.ID, "js_1"))
